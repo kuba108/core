@@ -1,0 +1,45 @@
+cs:
+  shoppe:
+    
+    navigation:
+      admin_primary:
+        orders: "Objednávky"
+        products: "Produkty"
+        product_categories: "Kategorie produktů"
+        delivery_services: "Doprava"
+        tax_rates: "Sazby daní"
+        users: "Uživatelé"
+        countries: "Země"
+        settings: "Nastavení"
+        
+    settings:
+      
+      types:
+        # Force certain settings to certain type
+        demo_mode: boolean
+      
+      labels:
+        # Labels for fields go here
+        email_address: "Informační e-mail obchodu"
+      
+      options:
+        # Options for boolean settings
+        demo_mode:
+          affirmative: Enabled
+          negative: Disabled
+      
+      help:
+        # Help text for individual fields
+        store_name: "Toto je jméno vašeho obchodu, které bude používáno v této administraci a také v defaultních odchozích e-mailových zprávách."
+        email_address: "E-mailová adresa, která má být používána k odesílání odchozích zpráv. Musí to být platná e-mailová adresa."
+        currency_unit: "Měnový symbol, který bude používán před všemi čísly, které vyjadřují finanční hodnotu. To platí jen pro administraci a musí být zvlášt naimplementováno ve vaší základní aplikaci."
+        tax_name: "Název pro daň, které bude vidět ve vaší administraci. Běžně zaměněno za VAT v evropských zemích."
+        demo_mode: "Pokud je tento mód aktivován, různí uživatelé se mohou přihlásit do vaší administrace, ale nebudou jim povoleny změny. Používat a opatrně a nikdy pro mimo administraci."
+        
+      defaults:
+        store_name: "Origi"
+        email_address: sales@example.com
+        currency_unit: "Kč"
+        tax_name: DPH
+        demo_mode: false
+        
