@@ -14,7 +14,7 @@ module Shoppe
     validates :permalink, :presence => true, :uniqueness => true
 
     # All categories ordered by their name ascending
-    scope :ordered, -> { order(:name) }
+    scope :ordered, -> { order(:created_at) }
     
     # Set the permalink on callback
     before_validation { self.permalink = self.name.parameterize if self.permalink.blank? && self.name.is_a?(String) }
