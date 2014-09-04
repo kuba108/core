@@ -59,6 +59,54 @@ module Shoppe
     def full_name
       "#{first_name} #{last_name}"
     end
+
+    # The hash with billing_address
+    #
+    # @return [Hash]
+    def billing_address
+      address = {}
+      address[:first_name] = self.first_name if self.first_name
+      address[:last_name] = self.last_name if self.last_name
+      address[:name] = self.first_name + " " + self.last_name if self.first_name
+      address[:company] = self.company if self.company
+      address[:address1] = self.billing_address1 if self.billing_address1
+      address[:address2] = self.billing_address2 if self.billing_address2
+      address[:address3] = self.billing_address3 if self.billing_address3
+      address[:address4] = self.billing_address4 if self.billing_address4
+      address[:postcode] = self.billing_postcode if self.billing_postcode
+      address[:country] = Shoppe::Country.find(self.billing_country_id).name if self.billing_country_id
+
+      address
+    end
+
+    # The hash with delivery address
+    #
+    # Logic is: if all attributes for custom delivery address is filled use them, or use billing address.
+    #
+    # @return [Hash]
+    def delivery_address
+      address = {}
+
+      if (self.delivery_address1 && !self.delivery_address1.empty?) && (self.delivery_address2 && !self.delivery_address2.empty?) && (self.delivery_postcode && !self.delivery_postcode.empty?) && (self.delivery_country_id && (!self.delivery_country_id.is_a? Integer))
+        address[:name] = self.delivery_name
+        address[:address1] = self.delivery_address1 if self.delivery_address1
+        address[:address2] = self.delivery_address2 if self.delivery_address2
+        address[:address3] = self.delivery_address3 if self.delivery_address3
+        address[:address4] = self.delivery_address4 if self.delivery_address4
+        address[:postcode] = self.delivery_postcode if self.delivery_postcode
+        address[:country] = Shoppe::Country.find(self.delivery_country_id).name if self.delivery_country_id
+      else
+        address[:name] = self.first_name + " " + self.last_name if self.first_name && self.last_name
+        address[:address1] = self.billing_address1 if self.billing_address1
+        address[:address2] = self.billing_address2 if self.billing_address2
+        address[:address3] = self.billing_address3 if self.billing_address3
+        address[:address4] = self.billing_address4 if self.billing_address4
+        address[:postcode] = self.billing_postcode if self.billing_postcode
+        address[:country] = Shoppe::Country.find(self.billing_country_id).name if self.billing_country_id
+      end
+
+      address
+    end
   
     # Is this order empty? (i.e. doesn't have any items associated with it)
     #
