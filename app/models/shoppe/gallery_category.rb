@@ -14,5 +14,8 @@ module Shoppe
     # All categories ordered by their name ascending
     scope :ordered, -> { order(:name) }
 
+    # Set the permalink on callback
+    before_validation { self.permalink = self.name.parameterize if self.permalink.blank? && self.name.is_a?(String) }
+
   end
 end
