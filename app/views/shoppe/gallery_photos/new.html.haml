@@ -1,0 +1,5 @@
+- @page_title = t('.new_photo')
+= content_for :header do
+  %p.buttons= link_to t('.back_to_photo_list'), :gallery_photos, :class => 'button'
+  %h2.products= t('.new_photo')
+= render 'form'

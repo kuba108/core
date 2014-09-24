@@ -157,6 +157,23 @@ class CreateShoppeInitialSchema < ActiveRecord::Migration
       t.text     "country_ids"
     end
 
+    create_table "shoppe_gallery_categories" do |t|
+      t.string   "name",         null: false
+      t.string   "title",        null: true
+      t.string   "description",  null: true
+      t.boolean  "display",      null: false, default: true
+      t.timestamps
+    end
+
+    create_table "shoppe_gallery_photos" do |t|
+      t.references :shoppe_gallery_category, null: false
+      t.string   "name",         null: false
+      t.string   "title",        null: true
+      t.boolean  "display",      null: false, default: true
+      t.boolean  "main",         null: false, default: false
+      t.timestamps
+    end
+
     create_table "shoppe_users" do |t|
       t.string   "first_name"
       t.string   "last_name"

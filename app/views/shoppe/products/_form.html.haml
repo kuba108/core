@@ -57,15 +57,33 @@
   = field_set_tag "Attachments" do
     .splitContainer
       %dl.half
-        %dt= f.label :default_image_file, "Default Image"
-        %dd
-          = attachment_preview @product.default_image
-          %p= f.file_field :default_image_file
-      %dl.half
         %dt= f.label :data_sheet_file, "Datasheet"
         %dd
           = attachment_preview @product.data_sheet
           %p= f.file_field :data_sheet_file
+      %dl.half
+
+
+  = field_set_tag "Fotky" do
+    .container
+      - for photo in @product_photos
+        .image-cover
+          %p.name= photo.name
+          = image_tag photo.image.url(:thumb), alt: photo.title
+          = link_to 'Smazat', delete_photo_path(id: @product.id, photo_id: photo.id), class: 'button purple'
+
+
+  = field_set_tag "Nahrát fotku" do
+    .splitContainer
+      %dl.third
+        %dt= f.label "Název"
+        %dd= text_field_tag "product[product_photo][name]", "", :class => 'text'
+      %dl.third
+        %dt= f.label "Titulek"
+        %dd= text_field_tag "product[product_photo][title]", "", :class => 'text'
+      %dl.third
+        %dt= f.label "Vybrat fotku"
+        %p= file_field_tag "product[product_photo][image]"
      
   - unless @product.has_variants?   
     = field_set_tag "Pricing" do

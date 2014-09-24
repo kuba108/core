@@ -8,6 +8,8 @@ cs:
         product_categories: "Kategorie produktů"
         delivery_services: "Doprava"
         tax_rates: "Sazby daní"
+        gallery_categories: "Galerie"
+        gallery_photos: "Fotky"
         users: "Uživatelé"
         countries: "Země"
         settings: "Nastavení"
@@ -42,4 +44,32 @@ cs:
         currency_unit: "Kč"
         tax_name: DPH
         demo_mode: false
+
+    gallery_photos:
+      index:
+        gallery_photos: "Fotky"
+        new_photo: "Nová fotka do galerie"
+        name: "Název"
+        no_photos: "Žádné fotky ke zobrazení."
+      new:
+        new_photo: "Nová fotka"
+        back_to_photo_list: "Zpátky na seznam fotek"
+      form:
+        photo_detail: "Informace o fotce"
+        attachment: "Přiloha"
+        image: "Obrázek"
+        delete: "Smazat"
+        are_you_sure: "Jste si jist/á, že chcete smazat fotku?"
+        cancel: "Zrušit"
+        create_photo: "Nahrát fotku"
+        name: "Název"
+        title: "Titulek"
+        gallery_category: "Kategorie galerie"
+      edit:
+        edit_photo: "Editace fotky"
+        back_to_photo_list: "Zpátky na seznam fotek"
+
+    products:
+      photo_not_found: "Fotka nebyla nalezena."
+      photo_was_deleted: "Fotka byla odstraněna."
         

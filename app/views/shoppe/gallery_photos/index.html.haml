@@ -1,0 +1,19 @@
+- @page_title = t('.gallery_photos')
+
+= content_for :header do
+  %p.buttons=link_to t('.new_photo'), :new_gallery_photo, :class => 'button green'
+  %h2.products= t('.gallery_photos')
+
+.table
+  %table.data
+    %thead
+      %tr
+        %th= t('.name')
+    %tbody
+      - if @gallery_photos.empty?
+        %tr.empty
+          %td= t('.no_photos')
+      - else
+        - for photo in @gallery_photos
+          %tr
+            %td= link_to photo.name, [:edit, photo]

@@ -1,0 +1,27 @@
+= form_for @gallery_photo do |f|
+  = f.error_messages
+  = field_set_tag t('.photo_detail') do
+    .splitContainer
+      %dl.half
+        %dt= f.label t('.name')
+        %dd= f.text_field :name, :class => 'focus text'
+      %dl.half
+        %dt= f.label t('.title')
+        %dd= f.text_field :title, :class => 'text'
+    %dl
+      %dt= f.label t('.gallery_category')
+      %dd= f.collection_select :gallery_category_id, Shoppe::GalleryCategory.ordered, :id, :name, {:include_blank => true}, {:class => 'chosen'}
+
+  = field_set_tag t('.attachment') do
+
+    %dl
+      %dt= f.label :image, t('.image')
+      %dd
+        = image_tag @gallery_photo.image.url(:thumb)
+        %p= f.file_field :image
+
+  %p.submit
+    - unless @gallery_photo.new_record?
+      %span.right= link_to t('.delete'), @gallery_photo, :class => 'button purple', :method => :delete, :data => {:confirm => t('.are_you_sure')}
+    = f.submit t('.create_photo'), :class => 'button green'
+    = link_to t('.cancel'), :gallery_categories, :class => 'button'

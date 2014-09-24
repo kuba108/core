@@ -5,6 +5,9 @@ Shoppe::Engine.routes.draw do
   resources :products do
     resources :variants
   end
+
+  get '/smazat-fotku/:id/:photo_id', :to => 'products#delete_photo', :as => 'delete_photo'
+
   resources :orders do
     post :search, :on => :collection
     post :accept, :on => :member
@@ -20,6 +23,8 @@ Shoppe::Engine.routes.draw do
     resources :delivery_service_prices
   end
   resources :tax_rates
+  resources :gallery_categories
+  resources :gallery_photos
   resources :users
   resources :countries
   resources :attachments, :only => :destroy

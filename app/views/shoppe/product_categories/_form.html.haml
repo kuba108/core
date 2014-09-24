@@ -16,8 +16,8 @@
     %dl
       %dt= f.label :image_file, "Image"
       %dd
-        = attachment_preview @product_category.image
-        %p= f.file_field :image_file
+        = image_tag @product_category.image.url(:thumb)
+        %p= f.file_field :image
 
   %p.submit
     - unless @product_category.new_record?
