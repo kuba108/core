@@ -1,5 +1,5 @@
-- @page_title= t('.edit_photo')
+- @page_title = t('.edit_photo')
 = content_for :header do
   %p.buttons= link_to t('.back_to_photo_list'), :gallery_categories, :class => 'button'
-  %h2.products t('.edit_photo')
+  %h2.products= t('.edit_photo')
 = render 'form'
