@@ -33,7 +33,7 @@ module Shoppe
     end
 
     def destroy
-      @gallery_category.destroy
+      @gallery_photo.destroy
       redirect_to :gallery_photos, :flash => {:notice => "Photo has been removed successfully"}
     end
 

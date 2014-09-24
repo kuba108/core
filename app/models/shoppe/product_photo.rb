@@ -3,7 +3,7 @@ module Shoppe
 
     has_attached_file :image, :styles => { :medium => "500x673#", :thumb => "253x340#", :small_thumb => "121x163#"},
                       :default_url => "/assets/default/:style/product-photo-default.jpg",
-                      :url => "/assets/product_photos/:id/:style/:basename.:extension"
+                      :url => "/paperclip/product_photos/:id/:style/:basename.:extension"
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
     belongs_to :shoppe_product, :class_name => 'Shoppe::Product'
