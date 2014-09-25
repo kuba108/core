@@ -72,4 +72,13 @@ cs:
     products:
       photo_not_found: "Fotka nebyla nalezena."
       photo_was_deleted: "Fotka byla odstraněna."
-        
+
+    order_mailer:
+      received:
+        subject: "Objednávka přijata"
+      accepted:
+        subject: "Objednávka přijata ke zpracování"
+      rejected:
+        subject: "Objednávka stornována"
+      shipped:
+        subject: "Objednávka je na cestě :)"

@@ -87,7 +87,8 @@ module Shoppe
     def delivery_address
       address = {}
 
-      if (self.delivery_address1 && !self.delivery_address1.empty?) && (self.delivery_address2 && !self.delivery_address2.empty?) && (self.delivery_postcode && !self.delivery_postcode.empty?) && (self.delivery_country_id && (!self.delivery_country_id.is_a? Integer))
+      #if (self.delivery_address1 && !self.delivery_address1.empty?) && (self.delivery_address2 && !self.delivery_address2.empty?) && (self.delivery_postcode && !self.delivery_postcode.empty?) && (self.delivery_country_id && (!self.delivery_country_id.is_a? Integer))
+      if self.separate_delivery_address
         address[:name] = self.delivery_name
         address[:address1] = self.delivery_address1 if self.delivery_address1
         address[:address2] = self.delivery_address2 if self.delivery_address2
