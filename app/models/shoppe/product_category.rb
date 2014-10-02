@@ -3,7 +3,7 @@ module Shoppe
   
     self.table_name = 'shoppe_product_categories'
 
-    has_attached_file :image, :styles => { :medium => "500x673#", :thumb => "253x340#" },
+    has_attached_file :image, :styles => { :medium => "500x673#", :thumb => "253x340#", :original => "892x1200#" },
                       :default_url => "/assets/photos/default/:style/product-category-default.jpg",
                       :url => "/assets/photos/product_categories/:id/:style/:basename.:extension",
                       :path => ":rails_root/public/assets/photos/product_categories/:id/:style/:basename.:extension"

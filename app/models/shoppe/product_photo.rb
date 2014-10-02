@@ -1,7 +1,7 @@
 module Shoppe
   class ProductPhoto < ActiveRecord::Base
 
-    has_attached_file :image, :styles => { :medium => "500x673#", :thumb => "253x340#", :small_thumb => "121x163#"},
+    has_attached_file :image, :styles => { :medium => "500x673#", :thumb => "253x340#", :small_thumb => "121x163#", :original => "892x1200#"},
                       :default_url => "/assets/photos/default/:style/product-photo-default.jpg",
                       :url => "/assets/photos/product_photos/:id/:style/:basename.:extension",
                       :path => ":rails_root/public/assets/photos/product_photos/:id/:style/:basename.:extension"
