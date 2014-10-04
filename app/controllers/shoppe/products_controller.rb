@@ -14,9 +14,9 @@ module Shoppe
     end
   
     def create
-      save_photo
       @product = Shoppe::Product.new(safe_params)
       if @product.save
+        save_photo
         redirect_to :products, :flash => {:notice => "Product has been created successfully"}
       else
         render :action => "new"
