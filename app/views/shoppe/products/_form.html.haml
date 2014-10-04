@@ -66,11 +66,12 @@
 
   = field_set_tag "Fotky" do
     .container
-      - for photo in @product_photos
-        .image-cover
-          %p.name= photo.name
-          = image_tag photo.image.url(:thumb), alt: photo.title
-          = link_to 'Smazat', delete_photo_path(id: @product.id, photo_id: photo.id), class: 'button purple'
+      - if @product_photos
+        - for photo in @product_photos
+          .image-cover
+            %p.name= photo.name
+            = image_tag photo.image.url(:thumb), alt: photo.title
+            = link_to 'Smazat', delete_photo_path(id: @product.id, photo_id: photo.id), class: 'button purple'
 
 
   = field_set_tag "Nahrát fotku" do
