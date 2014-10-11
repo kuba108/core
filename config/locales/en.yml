@@ -82,3 +82,30 @@ en:
         subject: "Storno of order"
       shipped:
         subject: "Order on the way :)"
+
+    countries:
+      index:
+        countries: "Countries"
+        new_country: "New country"
+        name: "Name"
+        iso_3166_aplha_2: "ISO 3166-1-alpha-2"
+        iso_3166_aplha_3: "ISO 3166-1-alpha-3"
+        continent: "Continent"
+        tld: "tld"
+        eu: "EU?"
+      edit:
+        countries: "Countries"
+        back_to_countries: "Back to countries"
+      new:
+        countries: "Countries"
+        back_to_countries: "Back to countries"
+      form:
+        user_details: "User Details"
+        iso_3166_aplha_2: "ISO 3166-alpha-2"
+        iso_3166_aplha_3: "ISO 3166-alpha-3"
+        tld: "TLD"
+        eu_member: "EU Member?"
+        country_is_eu_member: "Country is an EU member?"
+        delete: "Delete"
+        are_you_sure: "Are you sure you wish to remove this country?"
+        cancel: "Cancel"
