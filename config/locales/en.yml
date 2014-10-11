@@ -109,3 +109,36 @@ en:
         delete: "Delete"
         are_you_sure: "Are you sure you wish to remove this country?"
         cancel: "Cancel"
+
+    delivery_service_prices:
+      index:
+        delivery_services: "Delivery Services"
+        new_price: "New price"
+        back_to_delivery_services: "Back to delivery services"
+        delivery_pricing_for: "Delivery Pricing for"
+        code: "Code"
+        weight_allowance: "Weight Allowance"
+        price: "Price"
+        cost: "Cost"
+      new:
+        delivery_services: "Delivery Services"
+        back_to_prices: "Back to prices"
+      edit:
+        delivery_services: "Delivery Services"
+        back_to_prices: "Back to prices"
+      form:
+        identification_and_weight: "Identification & Weight"
+        code: "code"
+        min_weight: "min. weight"
+        max_weight: "max. weight"
+        pricing: "Pricing"
+        price: "price"
+        cost_price: "cost price"
+        tax_rate_id: "tax rate ID"
+        no_tax: "No tax"
+        countries: "Countries"
+        all_countries: "All countries"
+        delete: "Delete"
+        are_you_sure: "Are you sure you wish to remove this price?"
+        cancel: "Cancel"
+
