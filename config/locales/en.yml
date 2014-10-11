@@ -8,6 +8,8 @@ en:
         product_categories: Product Categories
         delivery_services: Delivery Services
         tax_rates: Tax Rates
+        gallery_categories: "Galleries"
+        gallery_photos: "Photos"
         users: Users
         countries: Countries
         settings: Settings
@@ -42,4 +44,41 @@ en:
         currency_unit: $
         tax_name: Tax
         demo_mode: false
-        
+
+    gallery_photos:
+      index:
+        gallery_photos: "Photos"
+        new_photo: "New photo"
+        name: "Name"
+        no_photos: "No photos to show."
+      new:
+        new_photo: "New photo"
+        back_to_photo_list: "Back to list"
+      form:
+        photo_detail: "Information about photo"
+        attachment: "Attachment"
+        image: "Image"
+        delete: "Delete"
+        are_you_sure: "Are you sure, you want to delete photo?"
+        cancel: "Cancel"
+        create_photo: "Upload photo"
+        name: "Name"
+        title: "Title"
+        gallery_category: "Gallery category"
+      edit:
+        edit_photo: "Edit photo"
+        back_to_photo_list: "Back to list"
+
+    products:
+      photo_not_found: "Photo not found"
+      photo_was_deleted: "Photo was deleted."
+
+    order_mailer:
+      received:
+        subject: "Order received"
+      accepted:
+        subject: "Order has been accepted"
+      rejected:
+        subject: "Storno of order"
+      shipped:
+        subject: "Order on the way :)"
