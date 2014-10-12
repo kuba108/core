@@ -429,3 +429,26 @@ en:
         delete: "Delete"
         are_you_sure: "Are you sure you wish to remove this tax_rate?"
         cancel: "Cancel"
+    users:
+      index:
+        users: "Users"
+        new_user: "New user"
+        name: "Name"
+        email_address: "E-Mail Address"
+      new:
+        users: "Users"
+        back_to_users: "Back to users"
+      edit:
+        users: "Users"
+        back_to_users: "Back to users"
+      form:
+        user_details: "User Details"
+        first_name: "First name"
+        last_name: "Last name"
+        login: "Login"
+        email_address: "E-Mail address"
+        password: "Password"
+        and_again: "...and again"
+        delete: "Delete"
+        are_you_sure: "Are you sure you wish to remove this user?"
+        cancel: "Cancel"
