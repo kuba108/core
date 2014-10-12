@@ -1,4 +1,4 @@
-- @page_title = "Order #{@order.number}"
+- @page_title = "#{t('.order')} #{@order.number}"
 
 .despatchNote
   %header
@@ -32,7 +32,7 @@
         %th= t('.product')
         %th= t('.sku')
         %th= t('.weight')
-        %th= t('.packed?')
+        %th= t('.packed')
     %tbody
       - for item in @order.order_items
         %tr

@@ -3,13 +3,13 @@
     %table.data
       %thead
         %tr
-          %th.qty Qty
-          %th Item
-          %th SKU
-          %th.money Cost
-          %th.money Price
+          %th.qty= t('.qty')
+          %th= t('.item')
+          %th= t('.sku')
+          %th.money= t('.cost')
+          %th.money= t('.price')
           %th.money= Shoppe.settings.tax_name
-          %th.money Sub-Total
+          %th.money= t('.sub_total')
       %tbody
         - for item in @order.order_items
           %tr
