@@ -1,26 +1,26 @@
 = form_for @gallery_category do |f|
   = f.error_messages
-  = field_set_tag 'Category Details' do
+  = field_set_tag t('.category_details') do
     .splitContainer
       %dl.half
-        %dt= f.label :name
+        %dt= f.label t('.name')
         %dd= f.text_field :name, :class => 'focus text'
       %dl.half
-        %dt= f.label :title
+        %dt= f.label t('.title')
         %dd= f.text_field :title, :class => 'text'
     %dl
-      %dt= f.label :description
+      %dt= f.label t('.description')
       %dd= f.text_area :description, :class => 'text'
-  = field_set_tag "Attachments" do
 
+  = field_set_tag t('.attachments') do
     %dl
-      %dt= f.label :image, "Image"
+      %dt= f.label t('.image')
       %dd
         = image_tag @gallery_category.image.url(:thumb)
         %p= f.file_field :image
 
   %p.submit
     - unless @gallery_category.new_record?
-      %span.right= link_to "Delete", @gallery_category, :class => 'button purple', :method => :delete, :data => {:confirm => "Are you sure you wish to remove this category?"}
+      %span.right= link_to t('.delete'), @gallery_category, :class => 'button purple', :method => :delete, :data => {:confirm => t('.are_you_sure')}
     = f.submit :class => 'button green'
-    = link_to "Cancel", :gallery_categories, :class => 'button'
+    = link_to t('.cancel'), :gallery_categories, :class => 'button'

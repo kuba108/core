@@ -45,30 +45,6 @@ en:
         tax_name: Tax
         demo_mode: false
 
-    gallery_photos:
-      index:
-        gallery_photos: "Photos"
-        new_photo: "New photo"
-        name: "Name"
-        no_photos: "No photos to show."
-      new:
-        new_photo: "New photo"
-        back_to_photo_list: "Back to list"
-      form:
-        photo_detail: "Information about photo"
-        attachment: "Attachment"
-        image: "Image"
-        delete: "Delete"
-        are_you_sure: "Are you sure, you want to delete photo?"
-        cancel: "Cancel"
-        create_photo: "Upload photo"
-        name: "Name"
-        title: "Title"
-        gallery_category: "Gallery category"
-      edit:
-        edit_photo: "Edit photo"
-        back_to_photo_list: "Back to list"
-
     products:
       photo_not_found: "Photo not found"
       photo_was_deleted: "Photo was deleted."
@@ -142,3 +118,50 @@ en:
         are_you_sure: "Are you sure you wish to remove this price?"
         cancel: "Cancel"
 
+    gallery_categories:
+      index:
+        gallery_categories: "Gallery Categories"
+        new_category: "New category"
+        name: "Name"
+      new:
+        gallery_categories: "Gallery Categories"
+        back_to_categories: "Back to categories"
+      edit:
+        gallery_categories: "Gallery Categories"
+        back_to_categories: "Back to categories"
+      form:
+        category_details: "Category Details"
+        name: "name"
+        title: "title"
+        description: "description"
+        attachments: "Attachments"
+        image: "image"
+        delete: "Delete"
+        are_you_sure: "Are you sure you wish to remove this category?"
+        cancel: "Cancel"
+
+    gallery_photos:
+      index:
+        gallery_photos: "Photos"
+        new_photo: "New photo"
+        name: "Name"
+        no_photos: "No photos to show."
+      new:
+        new_photo: "New photo"
+        back_to_photo_list: "Back to list"
+      form:
+        photo_detail: "Information about photo"
+        attachment: "Attachment"
+        image: "Image"
+        delete: "Delete"
+        are_you_sure: "Are you sure, you want to delete photo?"
+        cancel: "Cancel"
+        create_photo: "Upload photo"
+        name: "Name"
+        title: "Title"
+        gallery_category: "Gallery category"
+      edit:
+        edit_photo: "Edit photo"
+        back_to_photo_list: "Back to list"
+
+    
