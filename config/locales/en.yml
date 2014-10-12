@@ -295,3 +295,10 @@ en:
         order_placed: "Order placed"
         total_weight: "Total weight"
         telephone: "Telephone"
+    payments:
+      refund:
+        issue_refund: "Issue Refund"
+        to_issue_a_refund: "To issue a refund for this payment, just enter the amount you wish to refund below and click 'Refund'. The maximum you can refund is"
+        amount: "amount"
+        refund: "Refund"
+        close: "Close"
