@@ -396,3 +396,8 @@ en:
       edit:
         settings: "Settings"
         save_settings: "Save Settings"
+    shared:
+      error:
+        error: "Error"
+        error_has_occurred: "An error has occurred"
+        back_to_shoppe: "Back to Shoppe"
