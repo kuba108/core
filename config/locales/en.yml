@@ -45,10 +45,6 @@ en:
         tax_name: Tax
         demo_mode: false
 
-    products:
-      photo_not_found: "Photo not found"
-      photo_was_deleted: "Photo was deleted."
-
     order_mailer:
       received:
         subject: "Order received"
@@ -323,4 +319,63 @@ en:
         image: "Image"
         delete: "Delete"
         are_you_sure: "Are you sure you wish to remove this category?"
+        cancel: "Cancel"
+    products:
+      index:
+        products: "Products"
+        new_product: "New product"
+        products: "Products"
+      new:
+        products: "Products"
+        back_to_product_list: "Back to product list"
+      edit:
+        products: "Products"
+        back_to_product_list: "Back to product list"
+        variants: "Variants"
+        stock_levels: "Stock levels"
+      table:
+        sku: "SKU"
+        name: "Name"
+        price_variants: "Price/Variants"
+        stock: "Stock"
+        no_products_to_display: "No products to display."
+        edit: "Edit"
+        no_stock: "No stock"
+      form:
+        product_information: "Product Information"
+        name: "Name"
+        permalink: "Permalink"
+        sku: "SKU"
+        description: "Description"
+        short_description: "Short description"
+        whats_in_the_box: "What's in the box?"
+        attributes: "Attributes"
+        name: "Name"
+        value: "Value"
+        searchable: "Searchable?"
+        public: "Public?"
+        remove: "Remove"
+        value: "Value"
+        remove: "Remove"
+        add_attribute: "Add attribute"
+        attachments: "Attachments"
+        datasheet: "Datasheet"
+        fotky: "Fotky"
+        delete: "Delete"
+        upload_photo: "Upload photo"
+        title: "Title"
+        choose_photo: "Choose photo"
+        pricing: "Pricing"
+        price:
+        no_tax: "No tax"
+        stock_control: "Stock Control"
+        weight: "weight"
+        enable_stock_control: "Enable stock control for this product?"
+        website_properties: "Website Properties"
+        on_sale: "On sale?"
+        display_as_public: "If checked, this product will be displayed within the public store"
+        featured: "Featured?"
+        show_on_homepage: "If checked, this product will appear on your homepage"
+        delete: "Delete"
+        are_you_sure: "Are you sure you wish to remove this product?"
         cancel: "Cancel"
