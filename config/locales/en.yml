@@ -302,3 +302,25 @@ en:
         amount: "amount"
         refund: "Refund"
         close: "Close"
+    product_categories:
+      index:
+        product_categories: "Product Categories"
+        new_category: "New category"
+        name: "Name"
+        no_categories_to_display: "No categories to display."
+      new:
+        product_categories: "Product Categories"
+        back_to_categories_list: "Back to categories list"
+      edit:
+        product_categories: "Product Categories"
+        back_to_categories_list: "Back to categories list"
+      form:
+        category_details: "Category Details"
+        name: "name"
+        permalink: "permalink"
+        description: "description"
+        attachments: "Attachments"
+        image: "Image"
+        delete: "Delete"
+        are_you_sure: "Are you sure you wish to remove this category?"
+        cancel: "Cancel"
