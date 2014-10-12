@@ -392,3 +392,7 @@ en:
         email_address: "E-Mail Address"
         login: "Login"
         back_to_login: "Back to login"
+    settings:
+      edit:
+        settings: "Settings"
+        save_settings: "Save Settings"
