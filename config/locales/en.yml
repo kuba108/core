@@ -379,3 +379,16 @@ en:
         delete: "Delete"
         are_you_sure: "Are you sure you wish to remove this product?"
         cancel: "Cancel"
+    sessions:
+      new:
+        admin_login: "Admin Login"
+        email_address: "E-Mail Address"
+        password: "Password"
+        login: "Login"
+        reset_your_password: "Reset your password?"
+      reset:
+        admin_login: "Admin Login"
+        reset_your_password: "Reset your password"
+        email_address: "E-Mail Address"
+        login: "Login"
+        back_to_login: "Back to login"
