@@ -412,3 +412,20 @@ en:
         description: "Description"
         adjustment: "Adjustment"
         add: "Add"
+    tax_rates:
+      index:
+        tax_rates: "Tax Rates"
+        new_tax_rate: "New tax rate"
+        name: "Name"
+        rate: "Rate"
+      form:
+        tax_rates: "Tax Rates"
+        back_to_tax_rates: "Back to tax rates"
+        rate_details: "Rate Details"
+        name: "Name"
+        rate: "Rate"
+        country_restriction: "Country Restriction"
+        all_countries: "All countries"
+        delete: "Delete"
+        are_you_sure: "Are you sure you wish to remove this tax_rate?"
+        cancel: "Cancel"
