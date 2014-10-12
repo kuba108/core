@@ -401,3 +401,14 @@ en:
         error: "Error"
         error_has_occurred: "An error has occurred"
         back_to_shoppe: "Back to Shoppe"
+    stock_level_adjustments:
+      index:
+        stock_levels: "Stock Levels"
+        edit_product: "Edit product"
+        back_to_product_list: "Back to product list"
+        stock_levels_for: "Stock Levels for"
+        current_stock_level_is: "Current stock level is"
+        date: "Date"
+        description: "Description"
+        adjustment: "Adjustment"
+        add: "Add"
