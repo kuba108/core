@@ -1,6 +1,6 @@
 cs:
   shoppe:
-    
+
     navigation:
       admin_primary:
         orders: "Objednávky"
@@ -13,23 +13,23 @@ cs:
         users: "Uživatelé"
         countries: "Země"
         settings: "Nastavení"
-        
+
     settings:
-      
+
       types:
         # Force certain settings to certain type
         demo_mode: boolean
-      
+
       labels:
         # Labels for fields go here
         email_address: "Informační e-mail obchodu"
-      
+
       options:
         # Options for boolean settings
         demo_mode:
           affirmative: Enabled
           negative: Disabled
-      
+
       help:
         # Help text for individual fields
         store_name: "Toto je jméno vašeho obchodu, které bude používáno v této administraci a také v defaultních odchozích e-mailových zprávách."
@@ -37,7 +37,7 @@ cs:
         currency_unit: "Měnový symbol, který bude používán před všemi čísly, které vyjadřují finanční hodnotu. To platí jen pro administraci a musí být zvlášt naimplementováno ve vaší základní aplikaci."
         tax_name: "Název pro daň, které bude vidět ve vaší administraci. Běžně zaměněno za VAT v evropských zemích."
         demo_mode: "Pokud je tento mód aktivován, různí uživatelé se mohou přihlásit do vaší administrace, ale nebudou jim povoleny změny. Používat a opatrně a nikdy pro mimo administraci."
-        
+
       defaults:
         store_name: "Origi"
         email_address: sales@example.com
@@ -45,40 +45,459 @@ cs:
         tax_name: DPH
         demo_mode: false
 
-    gallery_photos:
-      index:
-        gallery_photos: "Fotky"
-        new_photo: "Nová fotka do galerie"
-        name: "Název"
-        no_photos: "Žádné fotky ke zobrazení."
-      new:
-        new_photo: "Nová fotka"
-        back_to_photo_list: "Zpátky na seznam fotek"
-      form:
-        photo_detail: "Informace o fotce"
-        attachment: "Přiloha"
-        image: "Obrázek"
-        delete: "Smazat"
-        are_you_sure: "Jste si jist/á, že chcete smazat fotku?"
-        cancel: "Zrušit"
-        create_photo: "Nahrát fotku"
-        name: "Název"
-        title: "Titulek"
-        gallery_category: "Kategorie galerie"
+      # view
       edit:
-        edit_photo: "Editace fotky"
-        back_to_photo_list: "Zpátky na seznam fotek"
-
-    products:
-      photo_not_found: "Fotka nebyla nalezena."
-      photo_was_deleted: "Fotka byla odstraněna."
+        settings: "Nastavení"
+        save_settings: "Uložit nastavení"
 
     order_mailer:
       received:
-        subject: "Objednávka přijata"
+        subject: "Objednávka obdržena"
       accepted:
         subject: "Objednávka přijata ke zpracování"
       rejected:
         subject: "Objednávka stornována"
       shipped:
         subject: "Objednávka je na cestě :)"
+
+    countries:
+      index:
+        countries: "Státy"
+        new_country: "Nový stát"
+        name: "Jméno"
+        iso_3166_aplha_2: "ISO 3166-1-alpha-2"
+        iso_3166_aplha_3: "ISO 3166-1-alpha-3"
+        continent: "Kontinent"
+        tld: "tld"
+        eu: "EU?"
+      edit:
+        countries: "Státy"
+        back_to_countries: "Zpět na Státy"
+      new:
+        countries: "Státy"
+        back_to_countries: "Zpět na Státy"
+      form:
+        user_details: "Deatily uživatele"
+        iso_3166_aplha_2: "ISO 3166-alpha-2"
+        iso_3166_aplha_3: "ISO 3166-alpha-3"
+        tld: "TLD"
+        eu_member: "Člen EU?"
+        country_is_eu_member: "Je tento stát členem EU?"
+        delete: "Smazat"
+        are_you_sure: "Určitě chcete odstranit tento stát?"
+        cancel: "Zrušit"
+
+    delivery_service_prices:
+      index:
+        delivery_services: "Způsob dopravy"
+        new_price: "Nová cena"
+        back_to_delivery_services: "Zpět na Způsob dopravy"
+        delivery_pricing_for: "Ceny dopravy u"
+        code: "Kód"
+        weight_allowance: "Rozmezí hmotnosti"
+        price: "Cena"
+        cost: "Náklady"
+      new:
+        delivery_services: "Způsob dopravy"
+        back_to_prices: "Zpět na Ceny"
+      edit:
+        delivery_services: "Způsob dopravy"
+        back_to_prices: "Zpět na Ceny"
+      form:
+        identification_and_weight: "Identifikace & Hmotnost"
+        code: "kód"
+        min_weight: "min. hmotnost"
+        max_weight: "max. hmotnost"
+        pricing: "Nacenění"
+        price: "cena"
+        cost_price: "cena nákladů"
+        tax_rate_id: "daňová sazba"
+        no_tax: "Bez daně"
+        countries: "Státy"
+        all_countries: "Všechny státy"
+        delete: "Smazat"
+        are_you_sure: "Určitě chcete smazat tuto cenu?"
+        cancel: "Zrušit"
+
+    gallery_categories:
+      index:
+        gallery_categories: "Kategorie v galerii"
+        new_category: "Nová kategorie"
+        name: "Jméno"
+      new:
+        gallery_categories: "Kategorie v galerii"
+        back_to_categories: "Zpět na kategorie"
+      edit:
+        gallery_categories: "Kategorie v galerii"
+        back_to_categories: "Zpět na kategorie"
+      form:
+        category_details: "Detaily kategorie"
+        name: "jméno"
+        title: "název"
+        description: "popis"
+        attachments: "Přílohy"
+        image: "obrázek"
+        delete: "Smazat"
+        are_you_sure: "Určitě chcete smazat tuto kategorii?"
+        cancel: "Zrušit"
+
+    gallery_photos:
+      index:
+        gallery_photos: "Fotky"
+        new_photo: "Nová fotka"
+        name: "Jméno"
+        no_photos: "Žádné fotky k zobrazení."
+      new:
+        new_photo: "Nová fotka"
+        back_to_photo_list: "Zpět na seznam fotek"
+      form:
+        photo_detail: "Informace o fotce"
+        attachment: "Příloha"
+        image: "Obrázek"
+        delete: "Smazat"
+        are_you_sure: "Určitě chcete smazat tuto fotku?"
+        cancel: "Zrušit"
+        create_photo: "Nahrát fotku"
+        name: "Jméno"
+        title: "Název"
+        gallery_category: "Kategorie v galerii"
+      edit:
+        edit_photo: "Upravit fotku"
+        back_to_photo_list: "Zpět na seznam fotek"
+
+    orders:
+      index:
+        orders: "Objednávky"
+        new_order: "Nová objednávka"
+        search_orders: "Vyhledat objednávku"
+        number: "Číslo"
+        customer: "Zákazník"
+        status: "Stav"
+        products: "Produkty"
+        total: "Celkem"
+        payment: "Platba"
+        no_orders_to_display: "Žádné objednávky k zobrazení."
+      new:
+        new_order: "Nová objednávka"
+        back_to_orders: "Zpět na objednávky"
+        new_order: "Nová objednávka"
+        create_order: "Vytvořit objednávku"
+        cancel: "Zrušit"
+      edit:
+        edit_order: "Upravit objednávku #"
+        back_to_order: "Zpět na objednávku"
+        notes: "Poznámky"
+        ordered_products: "Objednané produkty"
+        save_order: "Uložit objednávku"
+        cancel: "Zrušit"
+      show:
+        order: "Objednávka #"
+        edit: "Upravit"
+        despatch_note: "Dodací list"
+        back_to_orders: "Zpět na Objednávky"
+        warning: "Zákazník tuto objednávku ještě nedokončil. Nyní můžete pouze zobrazit objednávané položky."
+        order_items: "Položky objednávky"
+        payments: "Platby"
+      form:
+        billing_address: "Fakturační adresa"
+        address: "Adresa"
+        post_code: "Směrovací číslo"
+        country: "Stát"
+        select_a_country: "Vybrat stát"
+        use_a_seperate_delivery_address: "Použít jinou doručovací adresu?"
+        delivery_address: "Doručovací adresa"
+        first_name: "Křestní jméno"
+        last_name: "Příjmení"
+        company: "Firma"
+        email_address: "E-mailová adresa"
+        separate_delivery_address: "jiná doručovací adresa"
+        phone_number: "Telefon"
+        delivery_name: "Jméno pro doručení"
+      order_details:
+        name: "Jméno"
+        company: "Firma"
+        billing: "Fakurace"
+        address: "Adresa"
+        delivery_address: "Doručovací adresa"
+        email_address: "E-mailová adresa"
+        telephone: "Telefon"
+        weight: "Hmotnost"
+        build_time: "Build Time"
+        invoice_number: "Číslo faktury"
+        consignment_number: "Číslo zásilky"
+        mark_as_shipped: "Označ jako odeslané"
+        accept: "Přijmout"
+        reject: "Odmítnout"
+        order_balance: "Bilance objednávky"
+      order_items:
+        qty: "Množství"
+        item: "Položka"
+        sku: "SKU"
+        cost: "Náklady"
+        price: "Cena"
+        sub_total: "Mezisoučet"
+      order_items_form:
+        product: "Produkt"
+        quantity: "Množství"
+        stock: "Sklad"
+        unit_price: "Cena za kus"
+        tax: "Daň"
+        sub_total: "Mezisoučet"
+        weight: "Hmotnost"
+        add_an_item: "Přidat položku"
+        no_suitable_delivery_service: "Není dostupný žádný vhodný způsob dopravy. Bez způsobu dopravy nelze vytvořit objednávku."
+        no_delivery_required: "Pro tuto objednávku není vyžadována doprava."
+        any_changes_to_quantities_will_update: "Jakákoliv změna množství změní i množství daného zboží na skladě."
+      payments_form:
+        add_payment: "Přidat platbu"
+      payments_table:
+        id: "ID"
+        type: "Typ"
+        method: "Metoda"
+        reference: "Reference"
+        amount: "Suma"
+        refunded: "Peníze vráceny?"
+        refund: "Vrátit peníze"
+        payment: "Platba"
+        from_payment: "z platby #"
+        are_you_sure: "Určitě chcete odstranit tuto platbu?"
+        there_are_no_payments: "Pro tuto objednávku nejsou zaznamenány žádné platby..."
+        delete: "Smazat"
+      search_form:
+        order_number: "Číslo objednávky"
+        customer: "Zákazník"
+        billing_address: "Fakturační adresa"
+        consignment_number: "Číslo zásilky"
+        received_between: "Obdrženo mezi"
+        email_address: "E-mailová adresa"
+        phone_number: "Telefon"
+        status: "Stav"
+        search: "Vyhledat"
+      status_bar:
+        order_received: "Objednávka obdržena"
+        order_accepted: "Objednávka přijata"
+        order_rejected: "Objednávka stornována"
+        order_shipped: "Objednávka odeslána"
+        unknown: "Neznámý"
+        tracking_url: "URL na sledování stavu objednávky"
+        consignment: "Zásilka #"
+        by: "u"
+      despatch_note:
+        order: "Objednávka"
+        qty: "Množství"
+        quantity: "Množství"
+        sku: "SKU"
+        product: "Produkt"
+        weight: "Hmotnost"
+        packed: "Zabaleno?"
+        footer: "Děkujeme za Vaši objednávku!"
+        despatch_note: "Dodací list"
+        order_number: "Číslo objednávky"
+        order_placed: "Order placed"
+        total_weight: "Celková hmotnost"
+        telephone: "Telefon"
+
+    payments:
+      refund:
+        issue_refund: "Vracení peněz"
+        to_issue_a_refund: "Pokud chcete vrátit peníze za platbu, zadejte částku a klikněte na 'Vrátit peníze'. Maximálně můžete vrátit"
+        amount: "suma"
+        refund: "Vrátit peníze"
+        close: "Zavřít"
+
+    product_categories:
+      index:
+        product_categories: "Kategorie produktů"
+        new_category: "Nová kategorie"
+        name: "Jméno"
+        no_categories_to_display: "Žádné kategorie k zobrazení."
+      new:
+        product_categories: "Kategorie produktů"
+        back_to_categories_list: "Zpět na seznam kategorií"
+      edit:
+        product_categories: "Kategorie produktů"
+        back_to_categories_list: "Zpět na seznam kategorií"
+      form:
+        category_details: "Detaily kategorie"
+        name: "jméno"
+        permalink: "permalink"
+        description: "popis"
+        attachments: "Přílohy"
+        image: "Obrázek"
+        delete: "Smazat"
+        are_you_sure: "Určitě chcete smazat tuto kategorii?"
+        cancel: "Zrušit"
+
+    products:
+      index:
+        products: "Produkty"
+        new_product: "Nový produkt"
+        products: "Produkty"
+      new:
+        products: "Produkty"
+        back_to_product_list: "Zpět na seznam produktů"
+      edit:
+        products: "Produkty"
+        back_to_product_list: "Zpět na seznam produktů"
+        variants: "Varianty"
+        stock_levels: "Skladové zásoby"
+      table:
+        sku: "SKU"
+        name: "Jméno"
+        price_variants: "Cena/Varianty"
+        stock: "Sklad"
+        no_products_to_display: "Žádné produkty k zobrazení."
+        edit: "Upravit"
+        no_stock: "Žádný sklad"
+      form:
+        product_information: "Informace o produktu"
+        name: "Jméno"
+        permalink: "Permalink"
+        sku: "SKU"
+        description: "Popis"
+        short_description: "Krátký popis"
+        whats_in_the_box: "Co je v krabici?"
+        attributes: "Atributy"
+        name: "Jméno"
+        value: "Hodnota"
+        searchable: "Vyhledatelné?"
+        public: "Veřejné?"
+        remove: "Odstranit"
+        value: "Hodnota"
+        remove: "Odstranit"
+        add_attribute: "Přidat atribut"
+        attachments: "Přílohy"
+        datasheet: "Datasheet"
+        photos: "Fotky"
+        delete: "Smazat"
+        upload_photo: "Nahrát fotku"
+        title: "Název"
+        choose_photo: "Vybrat fotku"
+        pricing: "Nacenění"
+        price:
+        no_tax: "Bez daně"
+        stock_control: "Kontrola skladu"
+        weight: "hmotnost"
+        enable_stock_control: "Umožnit skladovou kontrolu pro tento produkt?"
+        website_properties: "Vlastnosti webu"
+        on_sale: "Na prodej?"
+        display_as_public: "Pokud zaškrtnuto, tento produkt bude viditelný veřejně v obchodě"
+        featured: "Vybraný pro hlavní stránku?"
+        show_on_homepage: "Pokud zaškrtnuto, tento produkt bude viditelný na hlavní stránce"
+        delete: "Smazat"
+        are_you_sure: "Určitě chcete smazat tento produkt?"
+        cancel: "Zrušit"
+
+    sessions:
+      new:
+        admin_login: "Admin Login"
+        email_address: "E-mailová adresa"
+        password: Heslo"
+        login: "Login"
+        reset_your_password: "Resetovat heslo?"
+      reset:
+        admin_login: "Admin Login"
+        reset_your_password: "Resetujte si heslo"
+        email_address: "E-mailová adresa"
+        login: "Login"
+        back_to_login: "Zpět na login"
+
+    shared:
+      error:
+        error: "Chyba"
+        error_has_occurred: "Nastala chyba"
+        back_to_shoppe: "Zpět na Shoppe"
+
+    stock_level_adjustments:
+      index:
+        stock_levels: "Skladové zásoby"
+        edit_product: "Upravit produkt"
+        back_to_product_list: "Zpět na seznam produktů"
+        stock_levels_for: "Skladové zásoby pro"
+        current_stock_level_is: "Současné skladové zásoby jsou"
+        date: "Datum"
+        description: "Popis"
+        adjustment: "Úprava"
+        add: "Přidat"
+
+    tax_rates:
+      index:
+        tax_rates: "Daňové sazby"
+        new_tax_rate: "Nová daňová sazba"
+        name: "Jméno"
+        rate: "Sazba"
+      form:
+        tax_rates: "Daňové sazby"
+        back_to_tax_rates: "Zpět na Daňové sazby"
+        rate_details: "Detaily sazby"
+        name: "Jméno"
+        rate: "Sazba"
+        country_restriction: "Omezení států"
+        all_countries: "Všechny státy"
+        delete: "Smazat"
+        are_you_sure: "Určitě chcete smazat tuto daňovou sazbu?"
+        cancel: "Zrušit"
+
+    users:
+      index:
+        users: "Uživatelé"
+        new_user: "Nový uživatel"
+        name: "Jméno"
+        email_address: "E-mailová adresa"
+      new:
+        users: "Uživatelé"
+        back_to_users: "Zpět na Uživatele"
+      edit:
+        users: "Uživatelé"
+        back_to_users: "Zpět na Uživatele"
+      form:
+        user_details: "Detaily uživatele"
+        first_name: "Křestní jméno"
+        last_name: "Příjmení"
+        login: "Login"
+        email_address: "E-mailová adresa"
+        password: "Heslo"
+        and_again: "...a znovu"
+        delete: "Smazat"
+        are_you_sure: "Určitě chcete smazat tohoto uživatele?"
+        cancel: "Zrušit"
+
+    variants:
+      index:
+        variants: "Varianty"
+        edit_product: "Upravit produkt"
+        new_variant: "Nová varianta"
+        variants_of: "Varianty"
+        sku: "SKU"
+        name: "Jméno"
+        price: "Cena"
+        stock: "Sklad"
+        no_products_to_display: "Žádné produkty k zobrazení."
+        edit: "Upravit"
+        no_stock: "Žádné skladové zásoby"
+      form:
+        variants: "Varianty"
+        back_to_variants: "Zpět na Varianty"
+        variants_of: "Varianty"
+        product_information: "Informace o produktu"
+        name: "Jméno"
+        permalink: "Permalink"
+        sku: "SKU"
+        image: "Obrázek"
+        pricing: "Nacenění"
+        price: "Cena"
+        cost_price: "Nákladová cena"
+        tax_rate_id: "ID daňové sazby"
+        stock_control: "Kontrola skladu"
+        weight: "Hmotnost"
+        stock_control: "Kontrola skladu"
+        enable_stock_control: "Umožnit kontrolu skladu pro tento produkt?"
+        website_properties: "Vlastnosti webu"
+        on_sale: "Na prodej?"
+        public_store: "Pokud zaškrtnuto, tento produkt bude viditelný veřejně v obchodě"
+        default_variant: "Defaultní varianta?"
+        variant_default: "Pokud zaškrtnuto, tato varianta bude defaultní."
+        delete: "Smazat"
+        are_you_sure: "Určitě chcete smazat tuto variantu?"
+        save_variant: "Uložit variantu"
+        cancel: "Zrušit"

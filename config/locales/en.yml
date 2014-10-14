@@ -1,6 +1,6 @@
 en:
   shoppe:
-    
+
     navigation:
       admin_primary:
         orders: Orders
@@ -13,23 +13,23 @@ en:
         users: Users
         countries: Countries
         settings: Settings
-        
+
     settings:
-      
+
       types:
         # Force certain settings to certain type
         demo_mode: boolean
-      
+
       labels:
         # Labels for fields go here
         email_address: Store E-Mail Address
-      
+
       options:
         # Options for boolean settings
         demo_mode:
           affirmative: Enabled
           negative: Disabled
-      
+
       help:
         # Help text for individual fields
         store_name: This is the name of your store which will be used through the Shoppe admin interface as well as in the default outbound e-mail messages.
@@ -37,13 +37,18 @@ en:
         currency_unit: The symbol to be displayed before all numbers which relate to money. Only applies to the admin interface and must be implemented separately in your base application.
         tax_name: The name for "Tax" which will be displayed in your admin interface. Commonly replaced with VAT in European countries.
         demo_mode: If enabled, your Shoppe admin interface will allow any users to login and will not permit changes to your users. This should be used with caution and never enabled for a production store.
-        
+
       defaults:
-        store_name: Widgets Inc.
-        email_address: sales@example.com
-        currency_unit: $
-        tax_name: Tax
+        store_name: "Origi"
+        email_address: "sales@example.com"
+        currency_unit: "Kč"
+        tax_name: "DPH"
         demo_mode: false
+
+      # view
+      edit:
+        settings: "Settings"
+        save_settings: "Save Settings"
 
     order_mailer:
       received:
@@ -176,7 +181,7 @@ en:
         new_order: "New Order"
         back_to_orders: "Back to orders"
         new_order: "New Order"
-        create_order: "Create Order""
+        create_order: "Create Order"
         cancel: "Cancel"
       edit:
         edit_order: "Edit Order #"
@@ -360,7 +365,7 @@ en:
         add_attribute: "Add attribute"
         attachments: "Attachments"
         datasheet: "Datasheet"
-        fotky: "Fotky"
+        photos: "Photos"
         delete: "Delete"
         upload_photo: "Upload photo"
         title: "Title"
@@ -392,10 +397,6 @@ en:
         email_address: "E-Mail Address"
         login: "Login"
         back_to_login: "Back to login"
-    settings:
-      edit:
-        settings: "Settings"
-        save_settings: "Save Settings"
     shared:
       error:
         error: "Error"
