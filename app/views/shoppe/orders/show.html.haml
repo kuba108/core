@@ -16,6 +16,8 @@
   - else
     %p.warning= t('.warning')
 
+  = field_set_tag t('.order_note'), :class => 'padded' do
+    %p= @order.notes unless @order.notes.empty?
 
   = field_set_tag t('.order_items'), :class => 'padded' do
     = render 'order_items'

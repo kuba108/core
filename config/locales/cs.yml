@@ -1,4 +1,12 @@
 cs:
+
+  layouts:
+    shoppe:
+      application:
+        logged_in_as: "Přihlášen jako"
+        logout: "Odhlásit"
+        go_to: "Zobrazit web"
+
   shoppe:
 
     navigation:
@@ -13,6 +21,7 @@ cs:
         users: "Uživatelé"
         countries: "Země"
         settings: "Nastavení"
+        logout: "Odhlásit"
 
     settings:
 
@@ -198,6 +207,7 @@ cs:
         warning: "Zákazník tuto objednávku ještě nedokončil. Nyní můžete pouze zobrazit objednávané položky."
         order_items: "Položky objednávky"
         payments: "Platby"
+        order_note: "Poznámka k objednávce"
       form:
         billing_address: "Fakturační adresa"
         address: "Adresa"
@@ -222,7 +232,7 @@ cs:
         email_address: "E-mailová adresa"
         telephone: "Telefon"
         weight: "Hmotnost"
-        build_time: "Build Time"
+        build_time: "Dobra trvání"
         invoice_number: "Číslo faktury"
         consignment_number: "Číslo zásilky"
         mark_as_shipped: "Označ jako odeslané"
