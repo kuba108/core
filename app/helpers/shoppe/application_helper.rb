@@ -1,5 +1,7 @@
 module Shoppe
   module ApplicationHelper
+
+    ActionView::Base.default_form_builder = ::StandardBuilder
     
     def navigation_manager_link(item)
       link_to item.description, item.url(self), item.link_options.merge(:class => item.active?(self) ? 'active' : 'inactive')
