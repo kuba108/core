@@ -37,6 +37,20 @@ module Shoppe
       redirect_to :gallery_categories, :flash => {:notice => "Category has been removed successfully"}
     end
 
+    def show_on_homepage
+      begin
+        # Updates other homepage galleries not to be shown on homepage.
+        GalleryCategory.where(homepage: true).update_all(homepage: false)
+        # Sets gallery as homepage gallery.
+        gallery = GalleryCategory.find(params[:id])
+        gallery.homepage = true
+        gallery.save!
+        redirect_to edit_gallery_category_path(id: gallery.id), :flash => {:notice => "Category has been created successfully"}
+      rescue => e
+        redirect_to :gallery_categories, :flash => {:alert => e.message}
+      end
+    end
+
     private
 
     def safe_params

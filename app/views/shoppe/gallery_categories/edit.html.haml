@@ -1,5 +1,8 @@
 - @page_title = t('.gallery_categories')
 = content_for :header do
-  %p.buttons= link_to t('.back_to_categories'), :gallery_categories, :class => 'button'
+  %p.buttons
+    - unless @gallery_category.homepage
+      = link_to t('.show_on_home_page'), show_on_homepage_gallery_category_path(id: @gallery_category.id), :class => 'button green'
+    = link_to t('.back_to_categories'), :gallery_categories, :class => 'button'
   %h2.products= t('.gallery_categories')
 = render 'form'

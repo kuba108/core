@@ -1,0 +1,9 @@
+cs:
+  active_record:
+    errors:
+      messages:
+        not_saved:
+          one: "%{resource} nebyl uložen kvůli chybě:"
+          few: "%{resource} nebyl uložen kvůli %{count} chybám:"
+          many: "%{resource} nebyl uložen kvůli %{count} chybám:"
+          other: "%{resource} nebyl uložen kvůli %{count} chybám:"

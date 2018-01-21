@@ -23,7 +23,9 @@ Shoppe::Engine.routes.draw do
     resources :delivery_service_prices
   end
   resources :tax_rates
-  resources :gallery_categories
+  resources :gallery_categories do
+    get 'show-on-homepage', to: 'gallery_categories#show_on_homepage', on: :member
+  end
   resources :gallery_photos
   resources :users
   resources :countries

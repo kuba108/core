@@ -139,6 +139,7 @@ cs:
       edit:
         gallery_categories: "Kategorie v galerii"
         back_to_categories: "Zpět na kategorie"
+        show_on_home_page: "Zobrazit na hlavní stránce"
       form:
         category_details: "Detaily kategorie"
         name: "jméno"
