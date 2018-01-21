@@ -10,3 +10,4 @@ test/app/.sass-cache
 *.gem
 doc/
 .yardoc
+.idea/*
