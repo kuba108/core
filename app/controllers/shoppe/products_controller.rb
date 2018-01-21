@@ -44,10 +44,10 @@ module Shoppe
       begin
         photo = ProductPhoto.find(params[:photo_id])
         if photo.destroy!
-          flash[:notice] = I18n.t :photo_was_deleted, scope: [:shoppe, :products]
+          flash[:notice] = "Fotka byla smazána."
         end
       rescue
-        flash[:error] = I18n.t :photo_not_found, scope: [:shoppe, :products]
+        flash[:error] = "Něco se nepovedlo."
       end
 
       redirect_to [:edit, @product]

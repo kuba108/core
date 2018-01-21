@@ -12,12 +12,33 @@
       %dt= f.label t('.description')
       %dd= f.text_area :description, :class => 'text'
 
-  = field_set_tag t('.attachments') do
+  = field_set_tag t('.main_photo') do
     %dl
       %dt= f.label t('.image')
       %dd
         = image_tag @gallery_category.image.url(:thumb)
         %p= f.file_field :image
+
+  = field_set_tag t('.photos') do
+    .container
+      - if @gallery_category.photos
+        - for photo in @gallery_category.photos
+          .image-cover
+            %p.name= photo.name
+            = image_tag photo.image.url(:thumb), alt: photo.title
+            = link_to t('.delete'), delete_gallery_photo_path(id: @gallery_category.id, photo_id: photo.id), class: 'button purple'
+
+  = field_set_tag t('.upload_photo') do
+    .splitContainer
+      %dl.third
+        %dt= f.label t('.name')
+        %dd= text_field_tag "gallery[photo][name]", "", :class => 'text'
+      %dl.third
+        %dt= f.label t('.title')
+        %dd= text_field_tag "gallery[photo][title]", "", :class => 'text'
+      %dl.third
+        %dt= f.label t('.choose_photo')
+        %p= file_field_tag "gallery[photo][image]"
 
   %p.submit
     - unless @gallery_category.new_record?

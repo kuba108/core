@@ -7,6 +7,7 @@ Shoppe::Engine.routes.draw do
   end
 
   get '/smazat-fotku/:id/:photo_id', :to => 'products#delete_photo', :as => 'delete_photo'
+  get '/galerie/smazat-fotku/:id/:photo_id', :to => 'gallery_categories#delete_photo', :as => 'delete_gallery_photo'
 
   resources :orders do
     post :search, :on => :collection

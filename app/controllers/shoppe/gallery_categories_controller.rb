@@ -25,6 +25,7 @@ module Shoppe
     end
 
     def update
+      save_photo
       if @gallery_category.update(safe_params)
         redirect_to [:edit, @gallery_category], :flash => {:notice => "Category has been updated successfully"}
       else
@@ -51,10 +52,34 @@ module Shoppe
       end
     end
 
+    def delete_photo
+      begin
+        photo = GalleryPhoto.find(params[:photo_id])
+        if photo.destroy!
+          flash[:notice] = "Fotka byla smazána."
+        end
+      rescue
+        flash[:error] = "Něco se nepovedlo."
+      end
+
+      redirect_to [:edit, @gallery_category]
+    end
+
     private
 
     def safe_params
       params[:gallery_category].permit(:name, :title, :description, :image)
+    end
+
+    def save_photo
+      prms = params[:gallery][:photo]
+      if prms && !prms.blank? && !prms[:name].blank? && !prms[:title].blank? && !prms[:image].blank?
+        prms[:gallery_category_id] = @gallery_category.id
+        photo = Shoppe::GalleryPhoto.new(prms.permit(:gallery_category_id, :name, :title, :image))
+        if photo.save
+
+        end
+      end
     end
   
   end
