@@ -5,9 +5,9 @@ module Shoppe
     self.table_name = 'shoppe_gallery_categories'
 
     has_attached_file :image, :styles => { :medium => "500x673#", :thumb => "253x340#", :original => "892x1200#" },
-                      :default_url => "/assets/photos/default/:style/gallery-default.jpg",
-                      :url => "/assets/photos/galleries/:id/:style/:basename.:extension",
-                      :path => ":rails_root/public/assets/photos/galleries/:id/:style/:basename.:extension"
+                      :default_url => "/photos/default/:style/gallery-default.jpg",
+                      :url => "/photos/galleries/:id/:style/:basename.:extension",
+                      :path => ":rails_root/public/photos/galleries/:id/:style/:basename.:extension"
 
     validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
